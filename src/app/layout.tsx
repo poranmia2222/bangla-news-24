@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
 import Header from "@/component/Header";
+import Marquee from "@/component/Marquee";
 
 
 
@@ -23,6 +24,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <Header></Header>
+        <div className="sticky top-0 z-50">
+        <Marquee></Marquee>
+      </div>
         <main>
           {children}
         </main>
